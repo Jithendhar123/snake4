@@ -1,15 +1,15 @@
 
 let snake;
-let rez = 15;
+let rez = 20;
 let food;
 let w;
 let h;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(600, 600);
   w = floor(width / rez);
   h = floor(height / rez);
-  frameRate(12);
+  frameRate(5);
   snake = new Snake();
   foodLocation();
 }
@@ -30,7 +30,6 @@ function keyPressed() {
     snake.setDir(0, 1);
   } else if (keyCode === UP_ARROW) {
     snake.setDir(0, -1);
-  } else if (key == ' ') {
     snake.grow();
   }
 
